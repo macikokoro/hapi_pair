@@ -6,28 +6,27 @@ var serverOptions = {
 		engines: {
 			html: require('handlebars')
 		},
-		path: path.join(__dirname, 'templates')
+		path: path.join(__dirname, '/templates')
 	}
 };
 
 var server = hapi.createServer('localhost', Number(process.argv[2] || 8080), serverOptions);
 
 server.route({
-	path: '/{name}',
+	path: '/',
 	method: 'GET',
-	handler: function(req, res){
-		var content = req.params.name;
-		res.view('index');
-	}
+	handler: {
+		view: 'index.html'
+		}
 });
 
-server.route({
+/*server.route({
 	path: '/',
 	method: 'GET',
 	handler: function(req, res){
 		res("hello");
 	}
-})
+});*/
 
 
 
