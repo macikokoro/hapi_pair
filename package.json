@@ -1,22 +1,30 @@
 {
-  "name": "hapi_pair",
+  "name": "make-me-hapi",
   "version": "0.0.0",
-  "description": "Pair project using npm install hapi",
-  "main": "index.js",
+  "description": "Hello World server with happi",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node server.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sirjerky/hapi_pair.git"
+    "url": "https://github.com/macikokoro/makemehapi.git"
   },
-  "author": "Adam Brown && Joaquin Guardado",
-  "license": "ISC",
+  "keywords": [
+    "hapi",
+    "server",
+    "module"
+  ],
+  "author": "JQ",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sirjerky/hapi_pair/issues"
+    "url": "https://github.com/macikokoro/makemehapi/issues"
   },
-  "homepage": "https://github.com/sirjerky/hapi_pair",
+  "homepage": "https://github.com/macikokoro/makemehapi",
   "dependencies": {
-    "hapi": "^6.4.0"
+    "catbox-redis": "^1.0.4",
+    "hapi": "^6.5.1",
+    "joi": "^4.6.2"
   }
 }
